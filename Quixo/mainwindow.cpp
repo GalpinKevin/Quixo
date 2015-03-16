@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap * mon_image = new QPixmap (":/logo.png");
+    QPixmap * mon_image = new QPixmap (":/milieu.png");
     QGraphicsPixmapItem * mon_item = new QGraphicsPixmapItem (* mon_image);
     QGraphicsScene * ma_scene = new QGraphicsScene ();
     ma_scene -> addItem(mon_item);
