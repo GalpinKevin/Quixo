@@ -3,36 +3,32 @@
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
-#include "piece.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QGraphicsScene * ma_scene;
-    ma_scene = new QGraphicsScene();
-
-    piece * plateau[5][5];
-
-    QPixmap * vide = new QPixmap(":/vide.jpng");
-    QPixmap * croix = new QPixmap(":/croix.png");
-    QPixmap * rond = new QPixmap(":/rond.png");
-
-    for (int i = 0; i<5; i++)
+    QGraphicsScene * ma_scene ;
+    ma_scene = new QGraphicsScene ();
+    QGraphicsPixmapItem * mon_item ;
+    QPixmap * mon_image = new QPixmap (":/croix.png") ;
+    for (int j=0; j<5; ++j)
     {
-    y = 43*i;
-    for (int j = 0; j<5; j++)
+    for (int i=0; i<5; ++i)
     {
-    plateau[i][j] = new piece();
-    plateau[i][j]->setPixmap(* rond);
-    ma_scene->addItem(plateau[i][j]);
-    x = 43*j;
-    plateau[i][j]->setPos(x,y);
-    ui->ma_vue->setScene(ma_scene);
+    mon_item = new QGraphicsPixmapItem () ;
+    mon_item-> setPixmap(* mon_image) ;
+    //definit la position
+    mon_item-> setPos(i*100, j*100) ;
+    //definit l'echelle
+    mon_item-> setScale(1) ;
+    ma_scene->addItem(mon_item) ;
+    ui->ma_vue-> setScene(ma_scene) ;
     }
     }
 }
+
 
 MainWindow::~MainWindow()
 {

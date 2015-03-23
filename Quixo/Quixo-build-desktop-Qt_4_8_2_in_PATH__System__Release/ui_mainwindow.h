@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Mon Mar 16 08:53:59 2015
+** Created: Mon Mar 23 15:46:39 2015
 **      by: Qt User Interface Compiler version 4.8.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -15,6 +15,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QGraphicsView>
+#include <QtGui/QGridLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QMainWindow>
 #include <QtGui/QPushButton>
@@ -26,6 +27,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QGridLayout *gridLayout;
     QGraphicsView *ma_vue;
     QPushButton *pushButton;
 
@@ -36,13 +38,21 @@ public:
         MainWindow->resize(510, 513);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        gridLayout = new QGridLayout(centralWidget);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         ma_vue = new QGraphicsView(centralWidget);
         ma_vue->setObjectName(QString::fromUtf8("ma_vue"));
         ma_vue->setEnabled(true);
-        ma_vue->setGeometry(QRect(10, 3, 491, 461));
+
+        gridLayout->addWidget(ma_vue, 0, 0, 1, 1);
+
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(10, 470, 482, 31));
+
+        gridLayout->addWidget(pushButton, 1, 0, 1, 1);
+
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
