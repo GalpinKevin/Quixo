@@ -3,6 +3,7 @@
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 #include <QGraphicsScene>
+#include "piece.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
