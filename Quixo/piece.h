@@ -5,12 +5,13 @@
 class piece : public QGraphicsPixmapItem
 {
 public:
-    enum couleur_piece {piece_neutre=0, piece_rond, piece_croix};
+    enum couleur_piece {piece_neutre=0, piece_rond=1, piece_croix=2};
     explicit piece();
     //explicit piece(couleur_piece _couleur, int16_t _x, int16_t _y);
     bool estJouable(couleur_piece joueur, couleur_piece pieceSelect);
     int16_t x;
     int16_t y;
+
 
 protected:
     //void mousePressEvent(QGraphicsSceneMouseEvent * event);

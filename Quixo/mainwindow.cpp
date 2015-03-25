@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QGraphicsScene * ma_scene ;
     ma_scene = new QGraphicsScene ();
     QGraphicsPixmapItem * mon_item ;
-    QPixmap * mon_image = new QPixmap (":/croix.png") ;
+    QPixmap * mon_image = new QPixmap (":/vide.png") ;
     for (int j=0; j<5; ++j)
     {
         for (int i=0; i<5; ++i)
@@ -21,9 +21,9 @@ MainWindow::MainWindow(QWidget *parent) :
         mon_item = new QGraphicsPixmapItem () ;
         mon_item-> setPixmap(* mon_image) ;
         //definit la position
-        mon_item-> setPos(i*100, j*100) ;
+        mon_item-> setPos(i*45, j*45) ;
         //definit l'echelle
-        mon_item-> setScale(1.5) ;
+        mon_item-> setScale(1) ;
         ma_scene->addItem(mon_item) ;
         }
     }
