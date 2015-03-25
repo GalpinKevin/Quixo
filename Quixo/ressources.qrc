@@ -1,8 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>logo.png</file>
         <file>croix.png</file>
-        <file>milieu.png</file>
         <file>rond.png</file>
         <file>vide.png</file>
     </qresource>

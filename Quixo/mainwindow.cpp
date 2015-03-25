@@ -16,18 +16,19 @@ MainWindow::MainWindow(QWidget *parent) :
     QPixmap * mon_image = new QPixmap (":/croix.png") ;
     for (int j=0; j<5; ++j)
     {
-    for (int i=0; i<5; ++i)
-    {
-    mon_item = new QGraphicsPixmapItem () ;
-    mon_item-> setPixmap(* mon_image) ;
-    //definit la position
-    mon_item-> setPos(i*100, j*100) ;
-    //definit l'echelle
-    mon_item-> setScale(1) ;
-    ma_scene->addItem(mon_item) ;
+        for (int i=0; i<5; ++i)
+        {
+        mon_item = new QGraphicsPixmapItem () ;
+        mon_item-> setPixmap(* mon_image) ;
+        //definit la position
+        mon_item-> setPos(i*100, j*100) ;
+        //definit l'echelle
+        mon_item-> setScale(1.5) ;
+        ma_scene->addItem(mon_item) ;
+        }
+    }
+
     ui->ma_vue-> setScene(ma_scene) ;
-    }
-    }
 }
 
 

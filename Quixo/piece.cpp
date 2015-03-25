@@ -20,3 +20,4 @@ bool piece::estJouable(couleur_piece joueur, couleur_piece pieceSelect)
     else
         return false;
 }
+
