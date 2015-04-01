@@ -14,7 +14,7 @@ public:
 
 
 protected:
-    //void mousePressEvent(QGraphicsSceneMouseEvent * event);
+    void mouseClickEvent(QGraphicsSceneMouseEvent *event);
     //void mouseMoveEvent(QGraphicsSceneMouseEvent * event);
 
 private:

@@ -1,10 +1,11 @@
 #ifndef PLATEAU_H
 #define PLATEAU_H
+#include <QGraphicsScene>
 
-class plateau
+class plateau : public QGraphicsScene
 {
 public:
-    plateau();
+    explicit plateau();
 };
 
 #endif // PLATEAU_H
